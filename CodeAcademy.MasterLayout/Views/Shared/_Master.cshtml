@@ -1,0 +1,38 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>My ASP.NET MVC Website</title>
+    <style>
+        .odd {
+            color:red;
+        }
+        .even {
+            color:blue;
+        }
+    </style>
+</head>
+<body>
+    <div> 
+        <header>
+            <h2> Welcome to my Website </h2>
+            <div>
+                <a href="~/home">Home</a>
+                <a href="~/home/list">List</a>
+                @RenderSection("AdminMenu",false)
+            </div>
+        </header>
+        <content>
+            @RenderBody()
+        </content>
+        <footer>
+            &copy; - My Company &reg; - @DateTime.Now.Year
+        </footer>
+    </div>
+    <script></script>
+</body>
+</html>

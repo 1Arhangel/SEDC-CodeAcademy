@@ -1,0 +1,24 @@
+﻿@model List<string>
+@{
+    ViewBag.Title = "Messages";
+}
+
+<h2>Messages</h2>
+<div>
+    @foreach(string message in Model)
+    {
+        <p>@OptimizeMessage(message)</p>
+    }
+</div>
+
+@functions {
+    public string OptimizeMessage(string message)
+    {
+        if (message.Length > 50)
+        {
+            return message.Substring(0, 50) + "...";
+        }
+        else
+            return message;
+    }
+}
